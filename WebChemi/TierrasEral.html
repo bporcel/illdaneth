@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "- // W3C // DTD HTML 4.01 Transitional // EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+  <title>Îldanneth - Tierras Indómitas del Pilar de Eral</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.dropbtndos {
+  /*background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;*/
+  cursor: pointer;
+}
+
+.dropbtndos:hover, .dropbtndos:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content-viejo {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content-viejo a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+  body {
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }
+  
+  .todo {
+    padding-top: 0px;
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 10%;
+    background-image: url("Imagenes/background.jpg");
+      background-repeat: no-repeat;
+      background-position: top;
+    background-color: white
+  }
+
+.header {
+  background-color: #f1f1f1;
+  padding: 1px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: blue;
+  color: white;
+}
+
+.content {
+	margin:0 auto, 0 auto;
+  padding: 16px;
+  background-color:#fAfAfA;
+  color:black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding: 0 auto;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <A name="arriba"></A><h1>Îldanneth <img src="Imagenes/wr.png" alt="logo" style="width:100px;height:100px;"> <p style="color: red; font-size: 10px;display: inline">alpha</p> </h1>
+    <p><i>Guía de contexto global para jugadores y dungeon masters</i></p>
+</div>
+
+<div id="navbar">
+  <a href="Ildanneth.html">Inicio</a>
+  <a href="Razas.html">Razas</a>
+  <a class="dropbtndos active" id="Reinos" onclick="dropFunctionReinos()">Reinos</a>
+  <a href="Religiones.html">Religiones</a>
+  <a href="Cronologia.html">Cronología</a>
+  <!--<a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Referencias Rápidas</a>-->
+</div>
+<div id="dropReinos" class="dropdown-content" style="margin-left: 152px;">
+    <a class="dropbtnviejo" onmouseover="dropFunctionViejoIldanneth()">Viejo Îldanneth</a>
+    <a class="dropbtnnuevo" onmouseover="dropFunctionNuevoIldanneth()">Nuevo Îldanneth</a>
+    <a class="dropbtnindomitas" onmouseover="dropFunctionindomitas()">Tierras Indómitas</a>
+</div>
+  <div id="dropViejoIldanneth" class="dropdown-content" style="margin-left: 399px;">
+      <a class="dropbtnviejocontinente" onmouseover="dropFunctionViejoContinente()">Continente</a>
+      <a class="dropbtnviejoislas" onmouseover="dropFunctionViejoIslas()">Archipiélagos</a>
+  </div>
+    <div id="dropViejoCont" class="dropdown-content" style="margin-left: 599px;">
+        <a class="" href="ImperioAshtur.html">Imperio Ashtur</a>
+        <a class="" href="CiudadesLibres.html">Confederación de Ciudades Libres</a>
+        <a class="" href="ImperioAshtur.html">Reino de Ferethion</a>
+        <a class="" href="ImperioAshtur.html">Trestanna</a>
+        <a class="" href="ImperioAshtur.html">Meredion</a>
+        <a class="" href="ImperioAshtur.html">Nepher Eh Hephetekh</a>
+        <a class="" href="ImperioAshtur.html">Tribus Salvajes de las Sabanas</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Roth</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Reinos Olvidados</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Rottgarth</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Umbria</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Cónclave del Maggisterium</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Yggdshrunaval</a>
+    </div>
+    <div id="dropViejoIslas" class="dropdown-content" style="margin-left: 599px;">
+        <a class="" href="Reinos/ImperioAshtur.html">Diôrbhaïl</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Brysna</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Puertos Libres de Dara</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Unión Insular de Îbalara</a>
+        <a class="" href="Reinos/ImperioAshtur.html">Eldaria</a>
+    </div>
+<div id="dropNuevoIldanneth" class="dropdown-content" style="margin-left: 399px;margin-top:56px">
+    <a class="active dropbtn" href="Reinos/ImperioAshtur.html">hola</a>
+    <a class="active dropbtn" href="Reinos/ImperioAshtur.html">hola</a>
+    <a class="active dropbtn" href="Reinos/ImperioAshtur.html">hola</a>
+    <a class="active dropbtn" href="Reinos/ImperioAshtur.html">hola</a>
+</div>
+<div class="todo">
+<div class="content">
+  <h3>Tierras Indómitas del Pilar de Eral</h3>
+  <!-- <img src="Imagenes/imperioAshtur.svg" alt="D&DLogo" class="center">  -->
+  <h5>Datos Básicos:</h5>
+  <p style="color:#5e5e5e; font-size: 20px";>
+
+    <b>Capital:</b> n/a<br/>
+    <b>Población:</b> desconocido<br/>
+    <b>Forma de Gobierno:</b> Anarquía, Caos<br/>
+    <b>Religiones:</b> desconocido<br/>
+    <b>Importaciones:</b> n/a<br/>
+    <b>Exportaciones:</b> n/a<br/>
+    <b>Alineamiento:</b> cualquiera<br/>
+    <b>Idiomas:</b> común, otros<br/>
+
+  </p>
+  <h5>Información:</h5>
+
+  <h6>Introducción</h6>
+   <p style="color:#5e5e5e; font-size: 20px">
+    Cubiertas perennemente de nieve, las Tierras Indómitas del Pilar de Eral no son tierras amigables para la vida y la sociedad común. En ellas prácticamente no existe la vida inteligente, o eso 
+    se cree, y nunca se han encontrado civilizaciones avanzadas en el territorio que la forma. Sin embargo diversos grupos de hombres salvajes, bandas de contrabandistas, hechiceros de 
+    ramas prohibidas y clérigos de Eral en peregrinación habitan sus helados yermos. Estas tierras reciben su nombre de la leyenda que dice que en el lugar más frío y desértico del yermo 
+    se encuentra una antigua construcción hecha por la misma diosa del Orden y de la Luz, tan alta que puede verse desde cientos de kilómetros de distancia y que no es sino un portal al palacio de Eral 
+    en el mundo de los dioses. Miles de aventureros han muerto buscando esa puerta al mundo superior, pero la promesa de conocer a los dioses y encontrar poderosos artefactos sigue atrayendo 
+    a los curiosos de todo el mundo hasta este lugar.
+  </p>
+
+   <h6>Principales accidentes geográficos</h6>
+   <p style="color:#5e5e5e; font-size: 20px">
+    Todo el círculo polar del <i>septentrio</i>> está ocupado por un masivo continente siempre cubierto de nieve. Se desconoce con exactitud qué partes de su costa son glaciares o tierra. Las cordilleras 
+    se alzan cubiertas de blanco de forma intermitente por todo el territorio
+  </br></br>
+    <b>Península Blanca:</b> a pesar de su nombre, es la primera península de la Tierra de Eral que comienza el deshielo. Da lugar a la Bahía Blanca en su costa <i>oriental</i>>. La frontera natural 
+    entre las nieves todavía eternas y las jóvenes estepas verdes y húmedas es el gran bosque de coníferas que se abre paso entre el hielo y el frío, soportando la vida salvaje más importante 
+    de la región. Cuanto más al <i>septentrio</i>> se vaya, la conífera densa irá dando paso a las montañas y glaciares, y éstas al gran entramado de túneles de hielo y cuevas antiguas como el mundo mismo.
+  </br></br>
+    <b>El Pico de Eral:</b> en diversos mapas de exploradores se le hace mención, pero jamás ha aparecido en la cartografía oficial contrastada de los grandes estados. A pesar de ésto, es tan 
+    famosa que todo el mundo asume que realmente existe. Se trataría de una montaña solitaria alojada en medio del Desierto del Silencio, de gran altitud y muy escarpada. Su forma y su remota localización, 
+    a la misma distancia de todas las costas del <i>septentrio</i>, hacen que sea el objetivo de los aventureros y acólitos dispuestos a sacrificarlo todo con tal de encontrar cualquier objeto divino dejado 
+    allí por los antiguos dioses, o incluso el mismísimo Pilar de Eral.
+  </br></br>
+  <b>Lengua de Eral:</b> lengua de tierra que se adentra entre las Islas sin Ley, formando un paso estrecho y peligroso que conecta ambas costas del Viejo Mundo, pasando por el <i>septentrio</i> del Nuevo Mundo.
+   Al igual que la Península Blanca, ésta también comienza su deshielo. Originalmente tenía habitantes sensibles, sin embargo tras siglos de paso de contrabando y siendo refugio de piratas y bandidos, 
+   la Lengua <i>de facto</i> ha llegado a considerarse una extensión más de las Islas sin Ley, erradicando o echando a sus habitantes originales.
+  </br></br>
+  <b>Desierto del Silencio:</b> gran extensión de tierra yerma en el centro de las Tierras del Pilar de Eral. Refugio de las peores criaturas de la región y de las bandas de salvajes y apátridas 
+  que habitan estos lugares. Los terribles vientos que lo azotan constantemente hacen que en realidad sea un lugar extremadamente ruidoso y peligroso. Es la única zona 
+  con habitantes fijos, ya que tras altos muros circulares y cúpulas esparcidas por el páramo para cubrirse de las cambiantes y fuertes tormentas viven microsociedades subsistiendo del subsuelo y de la caza 
+  y la pesca de los lagos situados decenas de metros bajo el impenetrable hielo.
+  </p>
+  
+   <h6>Lugares importantes</h6>
+
+   <p style="color:#5e5e5e; font-size: 20px">
+    <b>Cúpulas del Silencio:</b> lo más parecido a una zona habitada en toda la región. Al lado nuevo del Desierto del Silencio se encuentra una aglomeración de ciclópeas cúpulas e inmensas 
+    murallas circulares. Dentro de estas extrañas construcciones habitan seres de todo tipo y origen. Subsisten cazando criaturas autóctonas y pescando en los lagos subterráneos cubiertos 
+    por el hielo. No se sabe cuánta gente vive entre estas cúpulas y murallas, ni qué tamaño real poseen, ya que se cree que se extienden por el subsuelo. Diversos reinos han tratado de someterlas 
+    en los periodos estivales pero nunca jamás lo han conseguido, a pesar de no poseer ningún ejército o gobierno conocido para organizarlos.
+  </br></br>
+    La mayoría de gente que parte hacia las Tierras Indómitas del Pilar de Eral paran aquí para reponer fuerzas, abastecerse y conseguir información o guías locales. Si hubiera algo parecido a una 
+    economía estable y organizada en la región, se basaría en estos servicios al viajero.
+  </br></br>
+    <b>Puertorroca:</b> tras la conquista por parte de varias organizaciones piratas de la Lengua de Eral, estalló una guerra intestina por el control del acantilado más escarpado de la costa <i>meridional</i>>. 
+    Esta guerra nunca tuvo ganador, y hay quien piensa que tampoco ha visto aún su fin, ya que constantemente ve correr la sangre por sus barrios por las guerras entre 
+    bandas rivales. El esfuerzo vale la pena, ya que es una 
+    maravilla de la ingeniería. Sus edificios colgantes, sus puentes suspendidos y sus sistemas de poleas capaces de elevar flotas enteras sobre las aguas la convierten en una joya inconquistable.
+  </br></br>
+    Los cañones que asoman de las paredes de los acantilados que forman la 'U' al rededor de la entrada a la ciudad portuaria son a la vez intento de intimidación y seguro de estabilidad y seguridad 
+    para las flotas amigas que entran en sus aguas gélidas.
+</p>
+   
+   <h6>Historia de la región</h6>
+
+   <p style="color:#5e5e5e; font-size: 20px">
+    Gracias a dibujos, mapas y estatuas antiguas encontradas por todo el Viejo Mundo, que hacen referencia a varias grandes ciudades en la región más <i>septentrional</i> del continente, se sabe que 
+    previo al Despertar existía una gran civilización, o puede que varias, en lo que hoy es la Tierra Indómita del Pilar de Eral. Las únicas ciudades 
+    habitadas de la zona perdieron a gran parte de sus habitantes pero permanecieron activas. En los últimos tiempos, las ciudades de Punta Blanca y Puertorroca han sido adheridas a potencias 
+    limítrofes, acabando así con los últimos bastiones de lo que en su día fue una sociedad unida y poderosa.
+   </br></br>
+    Ya en la era actual son muchos los intentos de conquista y exploración de la zona <i>septentrional</i> del continente. A veces con intenciones imperialistas, a veces con motivos religiosos, siempre tienen el 
+    mismo resultado: fracaso. El intenso frío, las tormentas y la fauna y gentes salvajes hacen de éstas misiones imposibles. A pesar de ésto, muchos son los aventureros que se adentran en los 
+    gélidos desiertos en busca de riquezas, objetos mágicos, la salvación divina o simplemente la gloria.
+  </br></br>
+    Tanto el Imperio Ashtur como el Reino de Ferethion han estado siempre muy interesados en las Tierras Indómitas del Pilar de Eral, ya que ambos estados creen que hay un paso marítimo que conecta 
+    las costas <i>orientales</i> y <i>occidentales</i>. Actualmente ambas potencias están colonizando zonas de deshielo en las costas cercanas a sus respectivas fronteras.
+  </br></br>
+    En la zona más <i>oriental</i> son los piratas y contrabandistas de las Islas sin Ley quienes se han hecho con la joya arquitectónica del <i>septentrio</i>, Puertorroca. Si bien la ciudad vio 
+    mejores días, es la más habitada de las Tierras del Pilar de Eral. Diversas expediciones de saqueo han partido desde esa zona hacia el interior de los desiertos helados.
+  </p>
+   <h6>Grupos, bandas y organizaciones relevantes</h6>
+  <p style="color:#5e5e5e; font-size: 20px">
+    <b>Bandas piratas</b>: en la actualidad, todas las bandas piratas de las Islas sin Ley tienen mayor o menor representación en la ciudad de Puertorroca. De entre todas, la más importante y 
+    actual banda líder de la ciudad es la de <b>El Cónclave</b>. Ellos dirigen Puertorroca con puño de hierro y siembran el caos en los al rededores. Invierten fortunas en la exploración 
+    de las regiones <i>septentrionales</i> y si alguien sabe dónde encontrar tesoros de incontable valor propios de otras eras, son ellos.
+  </br></br>
+    <b>Contrabandistas</b>: cerca de las fronteras con el Imperio y con Ferethion, habitan grupos de contrabandistas dispuestos a jugarse la vida a cambio de los excelentes pagos que los magos, 
+    clérigos, brujos y coleccionistas están dispuestos a pagar por las maravillas de Eral esparcidas por los bastos espacios blancos. Sus embarcaciones son muy rápidas para saltarse los bloqueos 
+    marítimos. Tienen buenas relaciones comerciales con los piratas de Puertorroca y con las gentes de las Cúpulas del Silencio.
+  </br></br>
+    <b>Anarquistas y apátridas</b>: la inmensa mayoría de estas microsociedades se encuentran en el Desierto del Silencio, aunque también se pueden encontrar algunos pequeños asentamientos en 
+    otras zonas, como en grandes y profundas cuevas o en bosques densos. Estas gentes son en su mayoría desterrados de sus países que no son aceptados en inguna sociedad civilizada. Se puede encontrar 
+    desde anarquistas hasta psicópatas, comerciantes que no respetaron leyes sagradas por codicia o simples vagabundos. Son lso colectivos más variopintos. Cada población puede ser 
+    un foco de maldad y traición o la villa más amigable del continente, nunca se sabe. Entre los asentamientos de las Cúpulas del Silencio, destacan la Cúpula del Trueno, la Cúpula de Eral y Ciudad Caos.
+  </br></br>
+    <b>Acólitos de Eral</b>: los peregrinos adoradores de Eral no escasean. Suelen viajar solos o en grupos pequeños y son bien tratados por los habitantes de la zona, ya que les dejan víveres 
+    o monedas con las que comerciar a cambio de alojamientos, guías y rumores sobre los objetos sagrados o incluso el mismísimo Pilar de Eral. La mayoría de estos seguidores de Eral mueren en bsuca 
+    de sus respuestas. De entre los que sobreviven, algunos acaban en la Cúpula de Eral y otros tratan de volver a sus países de origen con las manos más o menos vacías.
+  </p>
+  <h6>Rasgos opcionales</h6>
+  <p style="color:#5e5e5e; font-size: 20px">
+    <b>Cuerpo <i>septentrional</i>:</b> tras muchos años o incluso toda la vida en una de las regiones más frías de Îldanneth has desarrollado la capacidad de soportar el frío y las inclemencias 
+    del tiempo mejor que nadie. Las más fiera de las tormentas es un día normal para ti, y eres capaz de seguir el rastro de un conejo a través de las nieves frescas o entre los árboles escarchados como si nada.
+  </br></br>
+  Si has nacido, criado o llevas muchos años viviendo en las Tierras Indómitas del Pilar de Eral, ganas <b>ventaja para las tiradas de supervivencia en ambientes fríos o húmedos y ventaja en las salvaciones contra daños por frío</b>.
+  </br></br>
+  <b>Espíritu Eraliense:</b> tras tantos años conviviendo con los siervos de Eral y los restos sagrados de sus objetos divinos, los conoces mejor que nadie y entiendes el verdadero significado 
+  de Eral en el mundo y el universo.
+</br></br>
+Si eres un clérigo de Eral nacido o criado en esta zona obtienes <b>puedes repetir una tirada de salvación de sabiduría al día</b>.
+</br></br>
+  </p>
+
+  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar" style="width:250px;height:300px;">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Usuario</b></label>
+      <input type="text" placeholder="Nombre usuario" name="uname" required>
+
+      <label for="psw"><b>Contraseña</b></label>
+      <input type="password" placeholder="Contraseña" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recuérdame
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">¿No recuerdas tu <a href="#">contraseña?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+<p style="text-align:right;"><font size="2"><a href="#arriba">Volver arriba</a></font></p>
+</div>
+</div>
+</div>
+
+<script>
+/*
+  // Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}*/
+</script>
+
+<script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function dropFunctionReinos() {
+      document.getElementById("dropReinos").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtndos')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+
+    function dropFunctionViejoIldanneth() {
+      document.getElementById("dropNuevoIldanneth").classList.remove("show");
+      document.getElementById("dropViejoIldanneth").classList.toggle("show");
+    }
+        function dropFunctionViejoContinente() {
+          document.getElementById("dropViejoCont").classList.toggle("show");
+          document.getElementById("dropViejoIslas").classList.remove("show");
+        }
+        function dropFunctionViejoIslas() {
+          document.getElementById("dropViejoCont").classList.remove("show");
+          document.getElementById("dropViejoIslas").classList.toggle("show");
+        }
+    function dropFunctionNuevoIldanneth() {
+      document.getElementById("dropViejoIldanneth").classList.remove("show");
+        document.getElementById("dropViejoCont").classList.remove("show");
+        document.getElementById("dropViejoIslas").classList.remove("show");
+      document.getElementById("dropNuevoIldanneth").classList.toggle("show");
+    }
+    /*window.onclick = function(event) {
+      if (!event.target.matches('.dropbtnviejo')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content-viejo");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }*/
+    
+    </script>
+
+</body>
+</html>
